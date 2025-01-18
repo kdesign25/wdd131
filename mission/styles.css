@@ -1,0 +1,38 @@
+
+body{ 
+    font-family: "Times New Roman";
+    font-size: 20px;
+    text-align: left;
+}
+li{
+    padding: 10px;
+}
+h4{
+    color: #006EB6;
+    margin-bottom: -10px;
+}
+.center {
+    text-align: center;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+#how {
+    font-style: oblique;
+}
+#content {
+    max-width: 600px;
+    border: 2px solid rgb(65, 61, 62) ;
+   margin: 10px auto 10px auto;
+   padding: 150px;
+}
+footer{
+    size: 1.5; 
+}
+#logo {
+    width: 120px;
+    margin-bottom: 20px;
+    
+}
