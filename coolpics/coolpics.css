@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+:root {
+--primary-color: #52489c;
+--secondary-color: #59c3c3;
+--accent-color: #f45b69;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: Mooli, san-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+}
+a:link,
+a:visited {
+    color: var(--accent-color);
+}
+img {
+	max-width: 100%;
+    width: 250px;
+    height: 250px;   
+    display: block; 
+    object-fit: cover;
+    display: flex;
+    object-fit: cover;
+}
+header {
+    background-color: <your color>;
+    text: centered;
+
+    }
+
+    /* Default layout for larger screens (desktop) */
+.container {
+    display: flex;
+    flex-direction: row; /* Items are arranged in a row */
+    gap: 20px;
+  }
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column; /* Stacks items in a column */
+    }
+  }
+
+
+  /* Default desktop menu */
+.menu {
+    display: flex;
+    justify-content: space-around; /* Spreads menu items evenly */
+  }
+  
+  .menu a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+  }
+  
+  /* Stack menu items on smaller screens */
+  @media (max-width: 600px) {
+    .menu {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;    /* Center items in the column */
+    }
+  }
+
+
+
+
+
+
+
+  /* Default desktop layout */
+.content {
+    display: flex;
+    align-items: center; /* Align items side-by-side */
+    gap: 20px;
+  }
+  
+  img {
+    max-width: 100%; /* Keep the image smaller */
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+  }
+  
+  /* Mobile-friendly layout */
+  @media (max-width: 600px) {
+    .content {
+      flex-direction: column; /* Stack the image and text vertically */
+      text-align: center; /* Center the text */
+    }
+
+    img {
+      max-width: 100%; /* Let the image fill the width */
+      height: 250px;
+      width: 250px;
+      object-fit: cover;
+    }
+  }
+  
