@@ -1,15 +1,21 @@
 
-body{ 
+body { 
     font-family: "Times New Roman";
     font-size: 20px;
     text-align: left;
 }
-li{
+.dark {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+li {
     padding: 10px;
 }
-h4{
+h2 {
     color: #006EB6;
     margin-bottom: -10px;
+    font-size: 17px;
+    font-weight: normal;
 }
 .center {
     text-align: center;
@@ -19,20 +25,24 @@ h4{
     margin-left: auto;
     margin-right: auto;
 } 
+main {
+    line-height:25px;
+}
 #how {
     font-style: oblique;
 }
-#content {
+body {
     max-width: 600px;
-    border: 2px solid rgb(65, 61, 62) ;
+    border: 1px solid rgb(150, 150, 150) ;
    margin: 10px auto 10px auto;
-   padding: 150px;
+   padding: 60px 120px 30px 120px
 }
-footer{
-    size: 1.5; 
+footer {
+margin-top:  40px;
+margin-bottom: 10px;
 }
 #logo {
-    width: 120px;
+    width: 150px;
     margin-bottom: 20px;
-    
+    height: auto; 
 }
