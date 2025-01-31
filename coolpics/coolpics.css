@@ -12,91 +12,73 @@
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
+    background-color: rgb(199, 199, 195);
 }
 a:link,
 a:visited {
-    color: var(--accent-color);
+    color: var(--text-light);
+}
+header,footer,#menu-button {
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--text-light);
+    }
+footer{
+  text-align: left;
 }
 img {
-	max-width: 100%;
-    width: 250px;
-    height: 250px;   
-    display: block; 
-    object-fit: cover;
-    display: flex;
-    object-fit: cover;
+  max-width: 100%; /* Keep the image smaller */
+  height: 250px;
+  width: 250px;
+  border: 8px solid #ebebeb;
+  box-shadow: 7px 7px 7px #333;
+  object-fit: cover;
 }
-header {
-    background-color: <your color>;
-    text: centered;
-
-    }
-
-    /* Default layout for larger screens (desktop) */
-.container {
-    display: flex;
-    flex-direction: row; /* Items are arranged in a row */
-    gap: 20px;
-  }
-  @media (max-width: 600px) {
-    .container {
-      flex-direction: column; /* Stacks items in a column */
-    }
-  }
-
-
-  /* Default desktop menu */
+#menu-button{
+border: none;
+font-size: 1.2em;
+}
 .menu {
-    display: flex;
-    justify-content: space-around; /* Spreads menu items evenly */
-  }
-  
-  .menu a {
-    text-decoration: none;
-    padding: 10px;
-    color: black;
-  }
-  
-  /* Stack menu items on smaller screens */
-  @media (max-width: 600px) {
-    .menu {
-      flex-direction: column; /* Stack items vertically */
-      align-items: center;    /* Center items in the column */
-    }
-  }
-
-
-
-
-
-
-
-  /* Default desktop layout */
+  display: flex;
+  justify-content: space-around; 
+  flex-direction: column; 
+}
+nav a {
+  display: block;
+}
+/* Mobile - layout */
 .content {
     display: flex;
     align-items: center; /* Align items side-by-side */
     gap: 20px;
-  }
-  
-  img {
-    max-width: 100%; /* Keep the image smaller */
-    height: 250px;
-    width: 250px;
-    object-fit: cover;
-  }
-  
-  /* Mobile-friendly layout */
-  @media (max-width: 600px) {
-    .content {
-      flex-direction: column; /* Stack the image and text vertically */
-      text-align: center; /* Center the text */
-    }
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 0;
+    grid-row-gap: 20px;
 
-    img {
-      max-width: 100%; /* Let the image fill the width */
-      height: 250px;
-      width: 250px;
-      object-fit: cover;
+  }
+/* Tablet - layout */
+  @media only screen and (min-width: 700px) {
+    .content{
+      grid-template-columns: 47.5% 47.5%;
+      grid-column-gap: 5%;
+      grid-row-gap: 10px;
     }
   }
+/* Desktop - layout */
+  @media only screen and (min-width: 1000px) {
+    .content {
+      grid-template-columns: 30% 30% 30%;
+      grid-row-gap: 10px;
+
+    }
+    .menu{
+      flex-direction: row; 
+    }
+  #menu-button {
+    display: none;
+  }
+  }
+
   
+
