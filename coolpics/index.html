@@ -10,21 +10,35 @@
     <script src="coolpics.js"></script>
 </head>
 <body>
+
 <header class="header">
     <h1>Cool Pics</h1>
     <nav class="hide"></nav>
-    <button id="menu-button" >Menu</button>
-    <nav class="menu">
+
+<button id="menu-button" >Menu</button> 
+
+<!--   <ul class="menu">
+        <a onclick="toggleMenu()">Main Menu</a>
+        <a class="menu-item">Home</a>
+        <a class="menu-item">People</a>
+        <a class="menu-item">Places</a>
+        <a class="menu-item">About</a>
+        <a class="menu-item">Contact</a>
+    </ul>
+  -->     
+
+   <nav class="menu">
     <a href="#home">Home</a>
     <a href="#people">People</a>
     <a href="#places">Places</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
     </nav>
+
 </header>
 <main>
     <section class="gallery">
-    <div class="content">
+<div class="content">
     <figure> <img src="norris-sm.jpeg" alt="picture"></figure>
     <figure> <img src="norris-sm.jpeg" alt="picture"></figure>
     <figure> <img src="norris-sm.jpeg" alt="picture"></figure>
@@ -34,8 +48,12 @@
     <figure> <img src="norris-sm.jpeg" alt="picture"></figure>
     <figure> <img src="norris-sm.jpeg" alt="picture"></figure>
     <figure> <img src="norris-sm.jpeg" alt="picture"></figure>
-    </div>
+</div>
     </section>
+    <div class="viewer">
+        <button class="close-viewer">X</button>
+        <img src="norris-full.jpeg" alt="alt description">
+</div>
 </main>
 <footer>
     <p>©2023 Not a real site</p>
