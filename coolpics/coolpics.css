@@ -46,6 +46,13 @@ font-size: 1.2em;
 nav a {
   display: block;
 }
+/* Hide items by default */
+.menu-items {
+  display: none; 
+}
+.hide {
+	display: none;
+}
 /* Mobile - layout */
 .content {
     display: flex;
