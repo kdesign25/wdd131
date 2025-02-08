@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+:root {
+--gold-color: #EFC69B;
+--red-color: #AF1B3F;
+--dark-color: #473144;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Helvetica, Arial, sans-serif;
+--headline-font: Lora, Impact, serif;
+}
+
+body {
+    font-family: var(--dark-color);
+    font-size: 1.2em;
+    background-color:var(--text-light);
+}
+header{
+    color: var(--dark-color);
+}
+footer,#menu-button {
+    background-color: var(--red-color);
+    text-align: center;
+    color: var(--text-light);
+    }
+
+img {
+        max-width: 100%; /* Keep the image smaller */
+        height: 250px;
+        width: 250px;
+        border: 8px solid #ebebeb;
+        object-fit: cover;
+      }

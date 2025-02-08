@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog </title>
+    <meta name="author" content="kathia">
+    <meta name="description" content="kathia">
+    <link  rel="stylesheet" href="blog.css" >
+    <script src="blog.js" ></script>
+    <script src="index.js" ></script>
+</head>
+
+<body>
+<header class="header">
+    <h1>Kids read for fun</h1>
+<nav id="menu">
+	<ul>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Archive</a></li>
+		<li><a href="#">Search</a></li>
+	</ul>
+</nav>
+    <ul class="menu">
+        <a onclick="toggleMenu()">Main Menu</a>
+        <li class="menu-item">Sort</li>
+        <li class="menu-item">Age</li>
+        <li class="menu-item">Genre</li>
+        <li class="menu-item">Rating</li>
+    </ul>
+</header>
+<main>
+    <section id="feed">
+        
+    </section>
+    <section class="gallery">
+        <p>Filter form will go here</p>
+    </section>
+    
+</main>
+<footer>
+    <p>©2023 Not a real site</p>
+</footer>
+<script>
+   
+window.onload = generateFeed
+</script>
+</body>
+</html>
