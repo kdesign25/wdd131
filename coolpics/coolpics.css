@@ -13,6 +13,7 @@ body {
     font-family: var(--primary-font);
     font-size: 1.2em;
     background-color: rgb(199, 199, 195);
+    margin: 0px;
 }
 a:link,
 a:visited {
@@ -22,78 +23,85 @@ header,footer,#menu-button {
     background-color: var(--primary-color);
     text-align: center;
     color: var(--text-light);
-    }
+}
+h2 {
+    font-size: 1em;
+    text-align: center;
+}
 footer{
-  text-align: left;
+    text-align: left;
 }
 img {
-  max-width: 100%; /* Keep the image smaller */
-  height: 250px;
-  width: 250px;
-  border: 8px solid #ebebeb;
-  box-shadow: 7px 7px 7px #333;
-  object-fit: cover;
+    max-width: 100%; /* Keep the image smaller */
+    height: 250px;
+    width: 250px;
+    border: 8px solid #ebebeb;
+    box-shadow: 7px 7px 7px #333;
+    object-fit: cover;
 }
 #menu-button{
-border: none;
-font-size: 1.2em;
+    border: 0px solid white;
+    font-size: 1.2em;
 }
 .menu {
-  display: flex;
-  justify-content: space-around; 
-  flex-direction: column; 
-}
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: column; 
+  }
 nav a {
-  display: block;
+    display: block;
 }
 /* Hide items by default */
 .menu-items {
-  display: none; 
+    display: none; 
 }
 .hide {
-	display: none;
+    display: none;
 }
 /* Mobile - layout */
-.content {
-    display: flex;
+.gallery {
+    display: flex; 
     align-items: center; /* Align items side-by-side */
-    gap: 20px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-column-gap: 0;
-    grid-row-gap: 20px;
+    display: grid; 
+    text-align: center;
+    justify-content: center;
 
   }
   .viewer{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.75);
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.75);
   }
-
 /* Tablet - layout */
   @media only screen and (min-width: 700px) {
-    .content{
-      grid-template-columns: 47.5% 47.5%;
+    .gallery{
+      /* grid-template-columns: 40% 40%; */
       grid-column-gap: 5%;
       grid-row-gap: 10px;
-    }
+      text-align: center;
+      grid-template-columns: 1fr 1fr;
+      
+      }
   }
 /* Desktop - layout */
   @media only screen and (min-width: 1000px) {
-    .content {
-      grid-template-columns: 30% 30% 30%;
+    .gallery {
+      /* grid-template-columns: 25% 25% 25%; */
       grid-row-gap: 10px;
+      text-align: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      /* max-width: 1100px; */
 
     }
     .menu{
       flex-direction: row; 
     }
-  #menu-button {
-    display: none;
-  }
+    #menu-button {
+      display: none;
+    }
   }
 
   

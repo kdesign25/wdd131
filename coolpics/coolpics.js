@@ -6,3 +6,16 @@ function toggleMenu() {
   }
   menuButton.classList.add('hide')
   
+  function toggleMenu() {
+      if (condition) {
+        
+      } else {
+        
+      }
+
+  }
+
+//   <div class="viewer">
+//   <button class="close-viewer">X</button>
+//   <img src="norris-full.jpeg" alt="alt description">
+// </div>
