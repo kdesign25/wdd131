@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 :root {
 --gold-color: #EFC69B;
 --red-color: #AF1B3F;
@@ -16,12 +16,25 @@ body {
 }
 header{
     color: var(--dark-color);
+    font-family: var(--headline-font);
+
 }
+#page-title {
+    text-align: center;
+}
+.data {
+    list-style: none;
+    display: inline;  
+}
+
 footer,#menu-button {
     background-color: var(--red-color);
     text-align: center;
     color: var(--text-light);
-    }
+}
+hr {
+    border-color:  var(--gold-color);
+}
 
 img {
         max-width: 100%; /* Keep the image smaller */
@@ -29,4 +42,24 @@ img {
         width: 250px;
         border: 8px solid #ebebeb;
         object-fit: cover;
-      }
+}
+.date {
+    font-size: 20px;
+
+}
+.bookmain {
+    display: inline;
+}
+
+.main-nav {
+    display: grid ;
+    grid-template-columns: 8fr 1fr 1fr ;
+    text-align: right;
+    list-style: none;
+
+}
+.main-nav li a {
+    margin-right: 80px;
+    margin-left: 80px;
+    text-decoration: none;
+}

@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog </title>
     <meta name="author" content="kathia">
-    <meta name="description" content="kathia">
+    <meta name="description" content="blog">
     <link  rel="stylesheet" href="blog.css" >
     <script src="blog.js" ></script>
     <script src="index.js" ></script>
 </head>
 
 <body>
+
 <header class="header">
-    <h1>Kids read for fun</h1>
+    <h1 id="page-title">Kids read for fun</h1>
+    <hr>
 <nav id="menu">
-	<ul>
+	<ul class="main-nav">
 		<li><a href="#">About</a></li>
 		<li><a href="#">Archive</a></li>
 		<li><a href="#">Search</a></li>
 	</ul>
 </nav>
-    <ul class="menu">
+<hr>
+    <ul class="filter">
         <a onclick="toggleMenu()">Main Menu</a>
         <li class="menu-item">Sort</li>
         <li class="menu-item">Age</li>
@@ -29,11 +32,12 @@
         <li class="menu-item">Rating</li>
     </ul>
 </header>
+
 <main>
     <section id="feed">
-        
+    
     </section>
-    <section class="gallery">
+    <section class="bookfilter">
         <p>Filter form will go here</p>
     </section>
     
