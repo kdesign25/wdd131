@@ -1,0 +1,29 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="creditcard.css" />
+    <script src="creditcard.js" defer></script>
+  </head>
+  <body>
+    <header><h1>Checkout</h1></header>
+    <main>
+      <section class="errors"></section>
+
+      <form action="/action_page.php">
+        <label for="cnumber">Card Number:</label><br>
+        <input type="text" id="cnumber" name="cnumber"><br><br>
+        <label for="cholder">Card Holder:</label><br>
+        <input type="text" id="cholder" name="cholder"><br><br>
+        <label for="expiration">Expiration</label><br>
+        <input type="text" id="expiration" name="expiration"><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+
+      <form id="checkoutForm" action="completed.html"></form>
+    </main>
+  </body>
+</html>

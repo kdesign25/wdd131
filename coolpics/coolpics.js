@@ -1,21 +1,12 @@
-function toggleMenu() {
-    let items = document.querySelectorAll(".menu-item");
-    items.forEach(item => {
-      item.style.display = (item.style.display === "none" || item.style.display === "") ? "block" : "none";
-    });
-  }
-  menuButton.classList.add('hide')
-  
-  function toggleMenu() {
-      if (condition) {
-        
-      } else {
-        
-      }
+const menuButton = document.querySelector('#menu-button');
+const menu = document.querySelector('.menu');
 
+function toggleMenu() { 
+  console.log("hello")
+    if (menu.classList.contains("hide")){
+      menu.classList.remove('hide')
+    } else {
+      menu.classList.add('hide')
+    } 
   }
-
-//   <div class="viewer">
-//   <button class="close-viewer">X</button>
-//   <img src="norris-full.jpeg" alt="alt description">
-// </div>
+menuButton.onclick = toggleMenu;
