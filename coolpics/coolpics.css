@@ -43,7 +43,7 @@ figure {
   
   padding: 0px 0px 0px 0px;
 }
-img {
+figure img {
     max-width: 100%; /* Keep the image smaller */
     height: 250px;
     width: 250px;
@@ -52,6 +52,7 @@ img {
     object-fit: cover;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
+    
 }
 #menu-button{
     border: 0px solid white;
@@ -90,6 +91,22 @@ nav a {
     bottom: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.75);
+    color: var(--text-light);
+    display: grid;
+
+}
+.close-viewer {
+  color: var(--text-light);
+  background: rgba(0, 0, 0, 0.0);
+  max-width: 20px;
+  max-height: 20px;
+  margin: auto;
+
+}
+div img {
+  max-height: 100%;
+  margin: auto;
+
 }
 /* Tablet - layout */
 @media only screen and (min-width: 700px) {
