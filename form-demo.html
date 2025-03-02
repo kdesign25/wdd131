@@ -13,17 +13,44 @@
     <main>
       <section class="errors"></section>
 
-      <form action="/action_page.php">
+     <form action="/action_page.php">
         <label for="fname">Full name:</label><br>
-        <input type="text" id="fname" name="fname"><br><br>
+        <input type="text" id="fname" name="fname"><br>
+
         <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email"><br><br>
+        <input type="email" id="email" name="email"><br>
+
         <label for="address">Address:</label><br>
-        <input type="text" id="address" name="address"><br><br>
-        <label for="pmethod">Payment Method:</label><br>
-        <input type="text" id="pmethod" name="pmethod"><br><br>
-        <input type="submit" value="Submit">
+        <textarea id="address" name="address" rows="4"></textarea><br>
+
+        <label for="paymentMethod">Payment Method:</label><br>
+        <select id="paymentMethod" name="paymentMethod" required><br>
+          <option value="">Select Payment Method</option>
+          <option value="creditCard">Credit Card</option>
+          <option value="paypal">PayPal</option>
+        </select><br>
+
+     <!-- Credit card information-->
+      <label for="creditcardnumber">Credit Card Number:</label><br>
+      <input type="text" id="creditcardnumber" name="creditcardnumber"><br>
+        <p id="creditcardnumber" class="hide">
+        <input 
+        type="text" 
+        id="creditcardnumber" 
+        name="creditcardnumber" 
+        pattern=" [0-9]{16}" 
+        placeholder="Enter 16 digits" required/><br>
+      </p>
+
+       <!--Paypal information-->
+      <label for="paypalusername">PayPal username:</label><br>
+      <input type="paypalusename" id="paypalusename" name="paypalusername"><br>
+       <p id="paypalusernamecontainer" class="hide">
+        <input type="text" id="paypalusername" name="paypalusername" placeholder="Enter paypal username" required/><br>
+      </p>
       </form> 
+
+      <button type="submit"> Place Order</button>
 
       <form id="checkoutForm" action="completed.html"></form>
     </main>
