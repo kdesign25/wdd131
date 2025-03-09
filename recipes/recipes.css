@@ -6,22 +6,33 @@
  --text-light: #ebebeb;
  --primary-font: Arial, Helvetica,sans-serif;
  --secondary-font: "Amatic SC";
- }
- img {
-	max-width: 100%;
 }
 
+img {
+	max-width: 100%;
+  justify-content: center;
+}
 
 .header img {
     float: center;
     width: 100px;
     height: 100px;
+    position: center;
+    font-family: var(--primary-font);
   }
   
   .header h1 {
     position: relative;
     top: 18px;
     left: 10px;
+    font-family: var(--primary-font);
+  }
+  .search-container{
+    display: flex;
+    justify-content: center;
+  }
+  main{
+    font-family: var(--primary-font);
   }
   .footer social {
     flex-direction: row;   
@@ -87,6 +98,10 @@
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }
+    img {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
 
   }
 
