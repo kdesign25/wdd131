@@ -23,14 +23,17 @@
     top: 18px;
     left: 10px;
   }
+  .footer social {
+    flex-direction: row;   
+      padding: 20px;
+      font-size: 40px;
+      width: 60px;
+      text-decoration: none;
+      margin: 5px 80px;
+  
+  }
 
-  .social {
-    padding: 20px;
-    font-size: 40px;
-    width: 60px;
-    text-decoration: none;
-    margin: 5px 80px;
-}
+
 
 /* Add a black background color to the top navigation bar */
 .topnav {
@@ -84,12 +87,14 @@
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }
+
   }
 
   body {
     font-family: sans-serif;
   }
 
+  
   /*footer {
     background-color: #333;
     position: fixed;
