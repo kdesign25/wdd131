@@ -1,15 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400, 700,300);
 body {
+  background-color: #ffb242;
   font-family: lato, 'helvetica-light';
   position: relative;
   text-transform: uppercase;
   padding: 20px 0;
-}
-image {
-
-    position: absolute;
-  bottom: -55px;
-  right: 0;
 }
 
 #amount {
@@ -27,11 +22,12 @@ image {
 }
 
 #card-btn {
-
+  background-color: rgba(251, 251, 251, 0.8);
+  color: #ffb242;
   position: absolute;
   bottom: -55px;
   right: 0;
-  width: 100px;
+  width: 150px;
   border-radius: 8px;
   height: 42px;
   font-size: 12px;
@@ -39,6 +35,8 @@ image {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
+  outline: none;
+  border: none;
   cursor: pointer;
 }
 
@@ -54,7 +52,7 @@ image {
 #card-front,
 #card-back {
   position: absolute;
-  background-color: #242b77;
+  background-color: #498ee4;
   width: 390px;
   height: 250px;
   border-radius: 6px;
@@ -67,7 +65,7 @@ image {
 }
 
 #card-image {
-  float: left;
+  float: right;
   height: 100%;
 }
 
@@ -190,12 +188,12 @@ image {
 input {
   border: none;
   outline: none;
-  background-color: #9e9e9e;
+  background-color: #5a9def;
   height: 30px;
   line-height: 30px;
   padding: 0 10px;
   margin: 0 0 25px;
-
+  color: white;
   font-size: 10px;
   box-sizing: border-box;
   border-radius: 4px;

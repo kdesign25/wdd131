@@ -21,3 +21,11 @@ window.addEventListener("resize", handleResize);
 
 menuButton.onclick = toggleMenu;
 
+
+ESTO ES COPIADO
+
+document.getElementById("menuButton").addEventListener("click", function () {
+  document.getElementById("menu").classList.toggle("hidden");
+});
+
+

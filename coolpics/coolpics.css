@@ -73,6 +73,12 @@ nav a {
 .hide {
     display: none;
 }
+ESTO ES COPIADO
+.hidden {
+  display: none;
+}
+
+
 /* Mobile - layout */
 .gallery {
     align-items: center; /* Align items side-by-side */
