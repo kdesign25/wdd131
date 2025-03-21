@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credit Card Payment Form</title>
-  <link type="text/css" rel="stylesheet" href="creditcard.css" />
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Payment Form</title>
+    <meta name="author" content="kathia">
+    <meta name="description" content="kathia">
+    <link type="text/css" rel="stylesheet" href="creditcard.css" /> 
 </head>
 <body>
     <div id="card-success" class="hidden">
@@ -33,44 +34,35 @@
 
     <!--- end card image container --->
     
-        <label for="card-number">
-            Card Number
-          </label>
-          <div class="information">
+            <label for="card-number">
+              Card Number
+            </label>
+          <div class="information"></div>
 
-
-        </div>
-
-        <input type="text" id="card-number" placeholder="1234 5678 9101 1020" maxlength="16">
-
-
-        <div id="cardholder-container">
-          <label for="card-holder">Card Holder</label>
-          <input type="text" id="card-holder" placeholder="John Doe" />
-
-        </div>
+          <input type="text" id="card-number" placeholder="1234 5678 9101 1020" maxlength="16">
+          <div id="cardholder-container">
+            <label for="card-holder">Card Holder</label>
+            <input type="text" id="card-holder" placeholder="John Doe" />
+          </div>
         <!--- end card holder container --->
         <div id="exp-container">
-          <label for="card-exp">
+            <label for="card-exp">
               Expiration
             </label>
           <input id="card-month" type="text" placeholder="MM" length="2">
           <input id="card-year" type="text" placeholder="YY" length="2">
         </div>
             <div id="cvc-container">
-          <label for="card-cvc"> CVC/CVV</label>
-                   
-
-          <input id="card-cvc" placeholder="XXX" type="text" minlength="3" maxlength="4">
+            <label for="card-cvc"> CVC/CVV</label>                   
+            <input id="card-cvc" placeholder="XXX" type="text" minlength="3" maxlength="4">
         </div>
         <!--- end CVC container --->
         <!--- end exp container --->
-      </div>
-      <!--- end card front --->
-      <div id="card-back">
-        <div id="card-stripe">
         </div>
-    
+        <!--- end card front --->
+        <div id="card-back">
+        <div id="card-stripe">
+        </div>           
     </div>
       <!--- end card back --->
       <input type="text" id="card-token" />
