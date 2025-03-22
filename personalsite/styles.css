@@ -72,15 +72,10 @@ nav a:hover {
 
 
 
-
-
-  
-/* Navigation */
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: none; /* Hide by default */
   flex-direction: column;
   background: #444;
   position: absolute;
@@ -88,26 +83,26 @@ nav ul {
   left: 0;
   width: 100%;
   padding: 10px 0;
-
-  /* Smooth slide animation */
-  opacity: 0;
+  opacity: 0; /* Initially hidden */
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none; /* Prevents clicking when hidden */
+}
 
-  }
+nav ul.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* Allow interaction */
+}
+
   
-  nav ul.active {
-    display: flex;  /* Show when active */
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  nav ul li {
+nav ul li {
     display: block;
     margin: 10px 0;
   }
   
-  nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
   }
@@ -123,6 +118,27 @@ nav ul {
     padding: 20px;
     text-align: center;
   }
+
+  #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    background-color: #1D1A4F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#backToTop:hover {
+    background-color: #0F0C3A; /* Slightly darker on hover */
+}
+
   
   footer {
     background-color: #1D1A4F;
