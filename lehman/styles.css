@@ -1,0 +1,851 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.content {
+  display: flex;
+  align-items: flex-start; /* Align items at the top */
+  gap: 20px; /* Space between image and text */
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  justify-content: flex-start; /* Aligns content to the left */
+}
+
+.image-text-container {
+  background-color: #f4f4f4; /* Light gray background */
+  padding: 20px; /* Add spacing inside the box */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: row; /* Stack title and text vertically */
+  align-items:center;  /*flex-start; Align content to the left */
+  gap: 50px; /* Space between title and text */
+  width: 100%; /* Full width */
+  margin: 0; /* Remove auto margin */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+
+
+
+
+
+
+.full-width-image {
+  max-width: 600px; /* Adjust image size */
+  height: auto;
+  display: block;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column; /* Stack title and paragraph vertically */
+  justify-content: center; /* Center text within the container */
+  align-items: center; /* Center text horizontally */
+  /*  gap: 10px; Space between title and paragraph */
+  max-width: 600px; /* Limit width of the text container */
+  text-align: center; /* Center text inside */
+   /*text-align: justify; Align text properly */
+}
+
+
+.small-text {
+   /* max-width: 300px; Limit width of small text */
+  font-size: 1.2em; /* Adjust text size */
+   /* text-align: left; Align text properly */
+   text-align: justify;
+}
+
+/* Style for the title */
+h2 {
+  margin: 0;
+  padding-bottom: 10px; /* Add space below the title */
+}
+
+/* Full-width text BELOW the image */
+.full-width-text {
+  flex-basis: 100%; /* Makes the "About Us" text take full width */
+  text-align: center; /* Center the full-width text */
+}
+
+
+.full-width-text {
+  flex-basis: 100%; /* Makes the "About Us" text take full width */
+  text-align: center; /* Center the full-width text */
+}
+
+/* Ensure the "About Us" text stays below */
+.full-width-text {
+  flex-basis: 100%; /* Forces full width so it appears below */
+  text-align: center;
+}
+
+
+/* Header */
+/*header {
+  background-image: url('f2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  background-color: #1D1A4F;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+  */
+
+header h1 {
+  margin-top: 20px;
+}
+
+/* Full-width image styling */
+.full-width-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation styles */
+nav {
+  background-color: #444;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  background-color: #666;
+}
+
+/* Mobile Menu */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #333;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.nav-links li {
+  margin: 20px 0;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #444;
+}
+
+footer {
+  background-color: #1D1A4F;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  position: relative; /* Instead of fixed */
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Hidden by default */
+  background-color: #FAB819;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out;
+}
+
+#backToTop:hover {
+  background-color: #0F0C3A; /* Slightly darker on hover */
+}
+
+
+/* Hamburger Button */
+.menu-toggle {
+  cursor: pointer;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) { /* Adjusts for tablets */
+  .image-text-container {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+  }
+
+  .full-width-image {
+    max-width: 90%; /* Scale image for tablets */
+  }
+
+  .text-container {
+    max-width: 80%; /* Prevents text from stretching too wide */
+  }
+}
+
+@media (max-width: 768px) { /* Adjusts for mobile */
+  .image-text-container {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .full-width-image {
+    max-width: 100%; /* Ensure image fits within container */
+  }
+
+  .text-container {
+    max-width: 90%; /* Adjust text width for readability */
+  }
+}
+
+
+
+
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center; /* Centers the images */
+  gap: 20px; /* Space between items */
+  flex-wrap: wrap; /* Makes it responsive */
+  padding: 40px 20px;
+  background-color: #f4f4f4; /* Light gray background */
+  margin-bottom: 50px; /* This adds space below the section */
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px; /* Limits width */
+  flex: 1; /* Allows resizing */
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.feature h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.feature p {
+  font-size: 1em; 
+  color: #333;
+}
+
+.feature button {
+  background: #1D1A4F;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.feature button:hover {
+  background: #0F0C3A;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column; /* Stack items on small screens */
+    align-items: center;
+    
+  }
+
+  .feature {
+    max-width: 90%; /* Make it more flexible */
+  }
+}
+
+/* More Info Section */
+.more-info {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff; /* White background */
+}
+
+.more-info h2 {
+  font-size: 1.5em;
+  color: #1D1A4F;
+  margin-bottom: 10px;
+}
+
+.more-info p {
+  font-size: 1.2em;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+  /*line-height: 1.6;*/
+}
+
+.bottom-image {
+  text-align: center; /* Center the image */
+  margin-top: 50px; /* Add space above the image */
+  margin-bottom: 50px; /* Add space below the image */
+}
+
+.bottom-image img {
+  max-width: 100%; /* Make sure it resizes properly */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Rounded corners */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+}
+
+.image-overlay-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-image {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-button {
+    position: absolute;
+    bottom: 10px; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1D1A4F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay-button:hover {
+    background-color: #0F0C3A;
+}
+
+
+
+.image-overlay-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-image {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-button {
+    position: absolute;
+    bottom: 10px; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1D1A4F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay-button:hover {
+    background-color: #0F0C3A;
+}
+
+
+
+
+
+
+.image-overlay-container {
+  position: relative;
+  width: 100%; /* Make it span the full width */
+}
+
+.overlay-image {
+  width: 100%; /* Ensure the image takes full width */
+  height: auto;
+  display: block;
+}
+
+.overlay-button {
+  position: absolute;
+  bottom: 20px; /* Adjusts how high the button sits */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1D1A4F;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.overlay-button:hover {
+  background-color: #0F0C3A;
+}
+
+
+
+
+
+.bike-sales-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8; /* Light background */
+}
+
+.bike-sales-container {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  gap: 20px; /* Space between image and text */
+}
+
+.bike-sales-info img {
+  width: 50%; /* Image takes half the section */
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.bike-sales-text {
+  width: 50%; /* Text takes half the section */
+  text-align: center;
+}
+
+.bike-sales-text h2 {
+  font-size: 1.5em;
+  color: #1D1A4F; /* Dark blue */
+}
+
+.bike-sales-text p {
+  font-size: 1.2em;
+  color: #333;
+  text-align: justify;
+}
+
+
+
+/* 📱 Make it responsive for smaller screens */
+@media (max-width: 768px) {
+  .bike-sales-container {
+      flex-direction: column; /* Stack image and text */
+      text-align: center; /* Center text for better readability */
+  }
+
+  .bike-sales-info img {
+      width: 100%; /* Full width on small screens */
+      max-height: 300px; /* Adjust height */
+  }
+
+  .bike-sales-text {
+      width: 100%; /* Full width for text */
+  }
+}
+
+
+
+
+footer {
+  background-color: #1D1A4F;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center; /* Align vertically */
+  justify-content: center; /* Center content */
+  gap: 15px; /* Space between elements */
+}
+
+.social {
+  display: flex;
+  flex-direction: row; /* Ensure icons are in a row */
+  gap: 10px; /* Space between icons */
+}
+
+.social a {
+  text-decoration: none; /* Remove default underline */
+}
+
+.social a img {
+  width: 30px; /* Adjust icon size */
+  height: 30px;
+}
+/* Contact Page Specific Styles */
+
+
+.contact-section {
+  background-color: #f4f4f4;
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+  margin-bottom: 80px; /* Adds space below the form */
+  padding-bottom: 40px; /* Optional: Adds extra space inside */
+  
+}
+
+
+.contact-section h2 {
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  text-align: left;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #FAB819;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+button:hover {
+  background-color:  #0F0C3A;
+}
+
+
+
+
+.contact-info {
+  text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 800px;
+
+  font-size: 1.2em;
+}
+
+.contact-details p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contact-details a {
+  color: #1D1A4F;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.map-container {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+
+/* Default header background for all pages */
+header {
+  background-image: url('f2.jpg'); /* Default homepage background */
+  background-size: cover;
+  background-position: center; /* Ensure the image is centered */
+  height: 300px;
+  color: white;
+  text-align: center;
+  
+}
+
+/* Change header background ONLY for Contact Us page 
+.contact-page header {
+  background-image: url('contact\ banner.jpg'); /* New Contact Us background 
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+                        
+*/ 
+
+
+.contact-page header {
+  background-image: url('contactbanner.jpg'); /* Correct path */
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  header {
+    height: 200px; /* Decrease header height */
+    background-size: cover; /* Keep it responsive */
+    background-position: center; /* Keep the image centered */
+  }
+}
+
+/* For tablets */
+@media (max-width: 1024px) {
+  header {
+    height: 300px; /* Slightly smaller header */
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+
+/* Contact Information Section */
+.contact-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f8f8f8; /* Light background */
+}
+
+.contact-information-container {
+  display: flex;
+  align-items: flex-start; /* Align to top */
+  max-width: 1000px;
+  gap: 30px; /* More spacing */
+}
+
+/* Contact Image */
+.contact-information img {
+  width: 45%; /* Slightly smaller for better text spacing */
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Contact Text */
+.contact-information-text {
+  width: 55%; /* More space for text */
+  text-align: left; /* Left-align for readability */
+}
+
+.contact-information-text h2 {
+  font-size: 1.8em;
+  color: #1D1A4F; /* Dark blue */
+  margin-bottom: 10px;
+}
+
+.contact-information-text p {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* List Styling */
+.contact-information-text ul {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+}
+
+.contact-information-text li {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+  .contact-information-container {
+      flex-direction: column; /* Stack elements */
+      align-items: center; /* Center content */
+      text-align: center;
+  }
+
+  .contact-information img {
+      width: 100%; /* Full width on small screens */
+      max-height: 300px; /* Adjust height */
+  }
+
+  .contact-information-text {
+      width: 100%;
+      text-align: center; /* Center-align for small screens */
+  }
+}
+
+.welcome-message {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.welcome-message h2 {
+  font-size: 2em;
+  color: #1D1A4F; /* Dark blue for emphasis */
+  margin-bottom: 20px;
+}
+
+.welcome-message p {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.4;
+
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+
+.service-page header {
+  background-image: url('services.jpg'); /* Correct path */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Container for the category buttons */
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between the buttons */
+  margin-top: 40px; /* Adds space at the top */
+}
+
+/* Specific styling for the category buttons */
+.category-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px; /* Adjust padding for better button size */
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the buttons */
+.category-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Focus outline for accessibility */
+.category-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Ensure buttons are not too large */
+.category-buttons button {
+  max-width: 100%; /* Prevents buttons from stretching too much */
+  box-sizing: border-box; /* Makes sure padding doesn't stretch the button */
+}
+
+#category-section .category-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.category-buttons {
+  position: relative; /* Make sure it's positioned within its container */
+  z-index: 10; /* Ensures it's above other elements like the back-to-top button */
+}
+
+
+.testimonial-slider .testimonial .testimonial-img {
+  width: 100px; /* Resize the image */
+  height: 100px; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image is properly scaled */
+  border-radius: 50%; /* Optional: Make the image circular */
+  margin-bottom: 10px; /* Space below the image */
+}
+
