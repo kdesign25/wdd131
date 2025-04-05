@@ -1,96 +1,100 @@
 @import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+
 :root {
---primary-color: #52489c;
---secondary-color: #59c3c3;
---accent-color: #f45b69;
---text-dark: #333;
---text-light: #ebebeb;
---primary-font: Arial, Helvetica,sans-serif;
---secondary-font: Mooli, san-serif;
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: Mooli, sans-serif;
 }
 
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
     background-color: rgb(199, 199, 195);
-    margin: 0px;
+    margin: 0;
 }
+
 a:link,
 a:visited {
     color: var(--text-light);
 }
-header {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-header,footer,#menu-button {
+
+header, footer, #menu-button {
     background-color: var(--primary-color);
     text-align: center;
     color: var(--text-light);
 }
+
 .header-footer {
-  padding-left: 150px;
-  padding-right: 150px;
+    padding-left: 150px;
+    padding-right: 150px;
 }
+
 h2 {
     font-size: 1em;
     text-align: center;
 }
-footer{
+
+footer {
     text-align: left;
 }
+
 figure {
-  
-  padding: 0px 0px 0px 0px;
+    padding: 0;
 }
+
 figure img {
-    max-width: 100%; /* Keep the image smaller */
+    max-width: 100%;
     height: 250px;
     width: 250px;
     border: 8px solid #ebebeb;
     box-shadow: 7px 7px 7px #333;
     object-fit: cover;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    
+    margin: 0;
+    padding: 0;
 }
-#menu-button{
-    border: 0px solid white;
+
+#menu-button {
+    border: 0;
     font-size: 1.2em;
 }
+
 .menu {
     display: flex;
-    justify-content: space-around; 
-    flex-direction: column; 
-  }
+    justify-content: space-around;
+    flex-direction: column;
+}
+
 nav a {
     display: block;
 }
+
 /* Hide items by default */
 .menu-items {
-    display: none; 
+    display: none;
 }
+
 .hide {
     display: none;
 }
-ESTO ES COPIADO
+
 .hidden {
-  display: none;
+    display: none;
 }
 
-
-/* Mobile - layout */
+/* Mobile layout */
 .gallery {
-    align-items: center; /* Align items side-by-side */
-    display: grid; 
+    display: grid;
     text-align: center;
-    justify-content: center;      
-    grid-column-gap: 0%;
+    justify-content: center;
+    grid-column-gap: 0;
     grid-row-gap: 10px;
+}
 
-
-  }
-.viewer{
+.viewer {
     position: fixed;
     top: 0;
     left: 0;
@@ -98,51 +102,58 @@ ESTO ES COPIADO
     right: 0;
     background: rgba(0, 0, 0, 0.75);
     color: var(--text-light);
-    display: grid;
-
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
 }
+
 .close-viewer {
-  color: var(--text-light);
-  background: rgba(0, 0, 0, 0.0);
-  max-width: 20px;
-  max-height: 20px;
-  margin: auto;
-
+    color: var(--text-light);
+    background: rgba(0, 0, 0, 0.0);
+    max-width: 20px;
+    max-height: 20px;
+    margin: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
 }
-div img {
-  max-height: 100%;
-  margin: auto;
 
+.viewer img {
+    max-height: 90%;
+    max-width: 90%;
+    margin: auto;
 }
-/* Tablet - layout */
+
+/* Tablet layout */
 @media only screen and (min-width: 700px) {
-  .gallery{
-    text-align: center;
-    grid-template-columns: 1fr 1fr;
-  }
-  .menu{
-    flex-direction: row; 
-  }
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu {
+        flex-direction: row;
+    }
 }
-/* Desktop - layout */
+
+/* Desktop layout */
 @media only screen and (min-width: 1000px) {
-  .gallery {
-    text-align: center;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .menu {
-    display:flex;
-    flex-direction: row; 
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-  }
-  #menu-button {
-    display: none;
-  }
-  main {
-    padding-left: calc((100% - 1100px) / 2);
-    padding-right: calc((100% - 1100px) / 2);
-  }
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    main {
+        padding-left: calc((100% - 1100px) / 2);
+        padding-right: calc((100% - 1100px) / 2);
+    }
 }
-
-  
-
